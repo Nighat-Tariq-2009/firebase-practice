@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <div class="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md" id="postForm">
+        <!-- Post Writing Area -->
+        <h2 class="text-2xl font-semibold mb-4">Create a Post</h2>
+        
+        <form action="#" method="POST">
+          <!-- Post Title -->
+          <div class="mb-4">
+            <label for="postTitle" class="block text-gray-700 font-medium mb-2">Title</label>
+            <input type="text" id="postTitle" name="postTitle" placeholder="Enter the title" 
+                   class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          
+          <!-- Post Content Text Area -->
+          <div class="mb-4">
+            <label for="postContent" class="block text-gray-700 font-medium mb-2">Write your post</label>
+            <textarea id="postContent" name="postContent" rows="8" placeholder="Write something amazing..." 
+                      class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="button" 
+                  class="w-full bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" id="post">
+            Post
+          </button>
+
+          <!-- Get all post  -->
+          <button type="button" 
+          class="w-full bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-10" id="allpost">
+    Get all Post
+  </button>
+  <div id="postsContainer" class="max-w-2xl mx-auto"></div>
+   <!-- delete post  -->
+   <button type="button" 
+   class="w-full bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-10" id="delpost">
+Delete Post
+</button>
+<!-- update post  -->
+<button type="button" 
+class="w-full bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-10" id="updpost">
+Update Post
+</button>
+        </form>
+      </div>
+       <!-- Display Area for the Submitted Post -->
+    <div id="postDisplay" class="max-w-2xl w-full bg-white shadow-lg rounded-lg p-6 hidden post " >
+      <h1 id="displayTitle" class="text-3xl font-semibold text-gray-800 mb-4"></h1>
+      <p id="displayContent" class="text-gray-700 text-lg leading-relaxed"></p>
+      <div id="postsContainer" class="max-w-2xl mx-auto"></div>
+  </div>
+      <script type="module" src="post.js"></script>
+      
+</body>
+</html>
